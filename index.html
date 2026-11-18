@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sneha15 – Placement Notes Bundle for IT Students</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F6FB;--ink:#0F1B33;--muted:#55627F;--card:#FFFFFF;--line:#D5DDEE;
+  --accent:#3B4BDB;--on-accent:#FFFFFF;--mark:#FFE45C;--mark-ink:#0F1B33;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1220;--ink:#E8EDF8;--muted:#9AA7C4;--card:#141C30;--line:#27324F;
+    --accent:#8E9BFF;--on-accent:#0C1220;--mark:#FFE45C;--mark-ink:#0C1220;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1220;--ink:#E8EDF8;--muted:#9AA7C4;--card:#141C30;--line:#27324F;
+  --accent:#8E9BFF;--on-accent:#0C1220;--mark:#FFE45C;--mark-ink:#0C1220;color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif;
+  }
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;line-height:1.1;margin:0}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:800;margin-bottom:.6rem}
+h3{font-size:1.15rem;font-weight:600}
+p{margin:0 0 1rem;max-width:62ch}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.mark{background:var(--mark);color:var(--mark-ink);padding:0 .15em;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.2rem}
+.btn{display:inline-block;border:2px solid var(--accent);background:var(--accent);color:var(--on-accent);font:500 1rem "IBM Plex Sans",sans-serif;
+  padding:12px 22px;border-radius:10px;text-decoration:none;cursor:pointer;transition:transform .12s}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.small{padding:8px 14px;font-size:.9rem}
+.hero{display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center;padding-top:28px}
+.hero p.lead{font-size:1.15rem;color:var(--muted)}
+.price{display:flex;align-items:baseline;gap:12px;margin:20px 0}
+.price b{font:800 2.6rem "Bricolage Grotesque",sans-serif}
+.price span{color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.qa{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:22px;box-shadow:6px 6px 0 var(--accent)}
+.qa small{color:var(--muted)}
+.qa .q{font:600 1.3rem/1.3 "Bricolage Grotesque",sans-serif;margin:8px 0 14px;min-height:3.4em}
+.qa .a{border-top:2px dashed var(--line);padding-top:14px;min-height:7.2em;color:var(--ink)}
+.qa .a.hidden{color:var(--muted)}
+.qa .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.parts{display:grid;gap:14px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+summary{cursor:pointer;display:flex;justify-content:space-between;gap:12px;font:600 1.1rem "Bricolage Grotesque",sans-serif;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary span{font:400 .9rem "IBM Plex Sans",sans-serif;color:var(--muted);white-space:nowrap}
+details ul{margin:12px 0 0;padding-left:20px;color:var(--muted)}
+.facts{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:24px}
+.fact{border-left:4px solid var(--accent);padding:4px 0 4px 14px}
+.fact b{display:block;font:800 1.5rem "Bricolage Grotesque",sans-serif}
+.pay{display:grid;gap:28px;grid-template-columns:260px 1fr;align-items:center;background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:26px}
+#qr{width:100%;max-width:260px;aspect-ratio:1/1;background:#fff;padding:10px;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;color:#333;font-size:.85rem}
+#qr img,#qr canvas{width:100%;height:auto;display:block}
+ol.steps{padding-left:22px;margin:0 0 18px}
+ol.steps li{margin-bottom:8px}
+.upi{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+code{font-family:"IBM Plex Mono",ui-monospace,monospace;background:var(--bg);border:1px solid var(--line);padding:3px 8px;border-radius:6px;word-break:break-all}
+.note{color:var(--muted);font-size:.9rem}
+footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+.sheet{display:grid;gap:28px;grid-template-columns:1.1fr .9fr;align-items:center;margin:22px 0}
+.paper{background:repeating-linear-gradient(var(--card) 0 31px,var(--line) 31px 32px);border:2px solid var(--ink);border-radius:6px;padding:14px 20px 14px 58px;position:relative;font:700 1.4rem/32px "Caveat","Comic Sans MS",cursive;box-shadow:6px 6px 0 var(--accent)}
+.paper::before{content:"";position:absolute;left:40px;top:0;bottom:0;width:2px;background:#E0546B}
+.paper h3{font:700 2rem/32px "Caveat","Comic Sans MS",cursive;margin:0 0 6px}
+.paper .box{border:2px solid var(--accent);padding:0 10px;border-radius:6px;display:inline-block;line-height:26px}
+.paper .ink{color:var(--accent)}
+.techs{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));margin-top:20px}
+.tech{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:14px 16px;font:700 1.55rem/1.1 "Caveat","Comic Sans MS",cursive}
+.tech:nth-child(odd){transform:rotate(-1.2deg)}
+.tech:nth-child(even){transform:rotate(1deg)}
+.tech small{display:block;font:400 .8rem "IBM Plex Sans",sans-serif;color:var(--muted);margin-top:8px}
+.tech.soon{border-style:dashed;opacity:.85}
+.deal{background:var(--accent);color:var(--on-accent);border-radius:16px;padding:30px 28px}
+.deal h2{margin-bottom:.5rem}
+.deal p{max-width:60ch}
+.deal-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin:18px 0}
+.deal-grid div{border:2px solid var(--on-accent);border-radius:12px;padding:14px 16px}
+.deal-grid b{display:block;font:800 2rem/1.1 "Bricolage Grotesque",sans-serif}
+.deal .deal-note{margin:0;font-weight:500}
+@media (max-width:760px){
+  .hero,.pay,.sheet{grid-template-columns:1fr}
+  #qr{margin:0 auto}
+  body{font-size:16px}
+  .btn{padding:13px 20px;min-height:46px;text-align:center}
+  .btn.small{min-height:42px}
+  .actions .btn{flex:1 1 100%}
+  section{padding:40px 0}
+  .deal{padding:24px 20px}
+  .paper{font-size:1.25rem;padding-left:50px}
+  .paper::before{left:34px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Sneha15</div>
+    <button class="btn ghost small" id="themeBtn" type="button" aria-label="Switch light or dark theme">Dark mode</button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Placement notes that match what interviewers <span class="mark">actually ask</span></h1>
+      <p class="lead" style="margin-top:18px">Handwritten notes for every technology, explained step by step with diagrams so they are easy to follow. Written by a recent IT graduate.</p>
+      <div class="price"><b>₹199</b><span>one-time payment, all notes included</span></div>
+      <div class="actions">
+        <a class="btn" href="#buy">Buy the bundle</a>
+        <a class="btn ghost" id="sampleBtn" href="#" target="_blank" rel="noopener">Get free sample chapter</a>
+      </div>
+    </div>
+    <div class="qa" aria-live="polite">
+      <small id="qaCount"></small>
+      <div class="q" id="qaQ"></div>
+      <div class="a hidden" id="qaA">Try answering it yourself first, then tap Show answer.</div>
+      <div class="row">
+        <button class="btn small" id="qaShow" type="button">Show answer</button>
+        <button class="btn ghost small" id="qaNext" type="button">Next question</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="deal">
+    <div class="deal">
+      <h2>Just ₹199 for all the notes</h2>
+      <p>Pay once and get the notes for every technology in one bundle. No monthly fees and no subscription.</p>
+      <div class="deal-grid">
+        <div><b>₹199</b>one-time payment</div>
+        <div><b>All</b>technologies in one bundle</div>
+        <div><b>PDF</b>yours to keep and revise anytime</div>
+      </div>
+      <p class="deal-note">Placement coaching classes often cost thousands of rupees. Here you get everything for one small investment.</p>
+    </div>
+  </section>
+
+  <section id="technologies">
+    <h2>Handwritten notes for every technology</h2>
+    <p>Short pages written by hand, with arrows, boxes and small examples, so a topic that fills a textbook chapter fits on one page you can follow quickly.</p>
+    <div class="sheet">
+      <div class="paper" aria-label="Sample of a handwritten notes page">
+        <h3>HashMap: how it works</h3>
+        <div>key → hashCode() → <span class="ink">index</span> → bucket</div>
+        <div>index = hash &amp; (n − 1)</div>
+        <div><span class="box">same index = collision</span></div>
+        <div>Long chain (8+) → tree in Java 8</div>
+        <div class="ink">Asked a lot: why is size a power of 2?</div>
+      </div>
+      <div>
+        <h3>Why handwritten?</h3>
+        <ul style="color:var(--muted);padding-left:20px">
+          <li>One idea per page, easy to scan before an interview</li>
+          <li>Diagrams and arrows instead of long paragraphs</li>
+          <li>Simple words, with the tricky part highlighted</li>
+        </ul>
+      </div>
+    </div>
+    <div class="techs" id="techGrid"></div>
+  </section>
+
+  <section id="inside">
+    <h2>What’s inside</h2>
+    <p>About 120 pages, built around the questions companies ask freshers. Tap a subject to see the topics.</p>
+    <div class="parts">
+      <details><summary>Java <span>about 40 pages</span></summary><ul>
+        <li>OOP concepts with real examples, abstract class vs interface</li>
+        <li>Collections: ArrayList vs LinkedList, HashMap internals, HashSet</li>
+        <li>Exception handling, final vs finally vs finalize</li>
+        <li>Multithreading basics, synchronized, thread lifecycle</li>
+        <li>Java 8: lambdas, streams, Optional</li>
+        <li>Top 50 Java interview questions with answers</li></ul></details>
+      <details><summary>DBMS and SQL <span>about 35 pages</span></summary><ul>
+        <li>ER model, keys, normalization (1NF to BCNF) with worked examples</li>
+        <li>Transactions, ACID, concurrency, deadlocks</li>
+        <li>Indexing and joins explained simply</li>
+        <li>SQL cheat sheet: joins, GROUP BY, subqueries, window functions</li>
+        <li>50 SQL practice queries with solutions</li></ul></details>
+      <details><summary>Operating Systems <span>about 25 pages</span></summary><ul>
+        <li>Processes vs threads, scheduling algorithms</li>
+        <li>Deadlock: conditions, prevention, avoidance</li>
+        <li>Memory management, paging, virtual memory</li>
+        <li>Semaphores, mutex and classic synchronization problems</li>
+        <li>30 most-asked OS questions</li></ul></details>
+      <details><summary>Computer Networks <span>about 20 pages</span></summary><ul>
+        <li>OSI vs TCP/IP model</li>
+        <li>HTTP, HTTPS, DNS, TCP vs UDP</li>
+        <li>IP addressing and subnetting basics</li>
+        <li>What happens when you type a URL in the browser</li>
+        <li>25 most-asked CN questions</li></ul></details>
+      <details><summary>Bonus <span>about 5 pages</span></summary><ul>
+        <li>One-page revision sheets for the night before</li>
+        <li>HR interview answers for freshers</li></ul></details>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>150+</b>interview questions with answers</div>
+      <div class="fact"><b>50</b>SQL practice queries with solutions</div>
+      <div class="fact"><b>PDF</b>delivered on Instagram DM</div>
+    </div>
+  </section>
+
+  <section id="buy">
+    <h2>Buy for ₹199</h2>
+    <p>Pay with any UPI app, then send the payment screenshot. You get the notes after the payment is verified.</p>
+    <div class="pay">
+      <div id="qr"><img src="WhatsApp Image 2026-11-18 at 9.42.38 AM.jpeg" alt="Scan to pay ₹199 on UPI"></div>
+      <div>
+        <ol class="steps">
+          <li>Scan the QR with any UPI app. On a phone, take a screenshot of the QR and pick it from your gallery in the app.</li>
+          <li>Pay exactly ₹199.</li>
+          <li>Send the payment screenshot to me on Instagram DM.</li>
+          <li>Receive your PDF notes after verification.</li>
+        </ol>
+        <div class="upi" style="display:none"><code id="upiText"></code>
+          <button class="btn ghost small" id="copyUpi" type="button">Copy UPI ID</button></div>
+        <div class="actions">
+          <a class="btn ghost" id="igBtn" href="#" target="_blank" rel="noopener">Send screenshot on Instagram</a>
+          
+        </div>
+        <p class="note" style="margin-top:14px">Digital product, delivered after payment verification, usually within a few hours. For personal use only.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <div class="parts">
+      <details><summary>Who are these notes for?</summary><p style="margin-top:10px">Final-year and pre-final-year students preparing for campus or off-campus placements.</p></details>
+      <details><summary>Is it a printed book?</summary><p style="margin-top:10px">No. They are handwritten notes in PDF form, which you can read on your phone, laptop or print yourself.</p></details>
+      <details><summary>How fast will I get it?</summary><p style="margin-top:10px">As soon as your payment is verified. Send the screenshot on Instagram DM to speed it up.</p></details>
+    </div>
+  </section>
+
+  <footer>© Sneha15. Notes are for personal use only. Do not resell or share.</footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* ===== EDIT THESE VALUES ===== */
+var UPI_ID   = "yourname@upi";          // your UPI ID
+var INSTAGRAM = "___sneha15__";          // your Instagram username without @
+          
+var SAMPLE_URL = "#";                   // link to your free sample PDF (e.g. Google Drive share link)
+/* ================================== */
+
+var PRICE = 199;
+var QAS = [
+  ["Why is String immutable in Java?", "Its value can’t change after creation. That makes it safe to share between threads, lets Java cache its hash code, and allows the string pool to reuse objects."],
+  ["What is a deadlock?", "Processes each hold a resource and wait for one held by another, so none can move. It needs four conditions together: mutual exclusion, hold and wait, no preemption, and circular wait."],
+  ["What is the difference between DELETE and TRUNCATE?", "DELETE removes rows one by one, accepts a WHERE clause and fires triggers. TRUNCATE empties the whole table faster, with no WHERE clause."],
+  ["TCP vs UDP: when would you use each?", "TCP is connection-based and reliable, with ordered delivery, so use it for web pages and file transfer. UDP is faster with no delivery guarantee, so use it for video calls and games."]
+];
+var qi = 0, shown = false;
+function $(id){return document.getElementById(id)}
+function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");setTimeout(function(){t.classList.remove("show")},1800)}
+
+function renderQA(){
+  $("qaCount").textContent = "Sample interview question " + (qi+1) + " of " + QAS.length;
+  $("qaQ").textContent = QAS[qi][0];
+  var a = $("qaA"); a.textContent = "Try answering it yourself first, then tap Show answer."; a.className = "a hidden"; shown = false;
+  $("qaShow").textContent = "Show answer";
+}
+$("qaShow").onclick = function(){
+  var a = $("qaA");
+  if(!shown){a.textContent = QAS[qi][1]; a.className = "a"; shown = true; this.textContent = "Hide answer";}
+  else{renderQA();}
+};
+$("qaNext").onclick = function(){qi = (qi+1) % QAS.length; renderQA();};
+renderQA();
+
+/* technologies list: change false to true when that subject’s notes are ready */
+var TECHS = [["Java",true],["SQL and DBMS",true],["Operating Systems",true],["Computer Networks",true],["Python",true],["C and C++",true],["DSA",true],["HTML, CSS and JavaScript",true],["React",true],["Node.js and MongoDB",true],["Spring Boot",true],["Git and GitHub",true],["AWS and Cloud basics",true],["AI and ML basics",true]];
+(function(){
+  var g = $("techGrid");
+  TECHS.forEach(function(t){
+    var d = document.createElement("div");
+    d.className = "tech" + (t[1] ? "" : " soon");
+    d.textContent = t[0];
+    var s = document.createElement("small");
+    s.textContent = t[1] ? "Included" : "Coming soon";
+    d.appendChild(s);
+    g.appendChild(d);
+  });
+})();
+
+/* links */
+var upiLink = "upi://pay?pa=" + encodeURIComponent(UPI_ID) + "&pn=Sneha15&am=" + PRICE + "&cu=INR&tn=" + encodeURIComponent("Placement Notes Bundle");
+var msg = "Hi, I paid ₹" + PRICE + " for the Placement Notes Bundle. Sending my payment screenshot.";
+$("upiText").textContent = UPI_ID;
+$("igBtn").href = "https://www.instagram.com/___sneha15__/" + INSTAGRAM;
+
+$("sampleBtn").href = SAMPLE_URL;
+$("copyUpi").onclick = function(){
+  try{navigator.clipboard.writeText(UPI_ID).then(function(){toast("UPI ID copied")},function(){toast("Copy failed, select the ID manually")});}
+  catch(e){toast("Copy failed, select the ID manually");}
+};
+
+
+/* theme */
+(function(){
+  var root = document.documentElement, btn = $("themeBtn");
+  function isDark(){
+    var t = root.getAttribute("data-theme");
+    if(t) return t === "dark";
+    return window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function label(){btn.textContent = isDark() ? "Light mode" : "Dark mode";}
+  try{var s = localStorage.getItem("ps-theme"); if(s) root.setAttribute("data-theme", s);}catch(e){}
+  label();
+  btn.onclick = function(){
+    var next = isDark() ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try{localStorage.setItem("ps-theme", next);}catch(e){}
+    label();
+  };
+})();
+</script>
+</body>
+</html>
